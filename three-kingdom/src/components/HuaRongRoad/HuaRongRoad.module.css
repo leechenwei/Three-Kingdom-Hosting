@@ -1,0 +1,153 @@
+/* HuaRongRoad.module.css */
+
+.container {
+    text-align: center;
+    background-color: rgb(251, 181, 181);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  }
+  
+  .inputSection {
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  
+  .mazeTable {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  .cell {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cell:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .empty {
+    background-color: #fff;
+  }
+  
+  .wall {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .start {
+    background-color: #0f0;
+  }
+  
+  .exit {
+    background-color: #f00;
+    color: #fff;
+  }
+  
+  .solveButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .solveButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .pathContainer {
+    background-color: gold;
+    padding: 15px;
+    width: max-content;
+    margin: auto;
+    border-radius: 15px;
+  }
+  
+  .path {
+    margin-top: 20px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    width: max-content;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  
+  .path.show {
+    background-color: rgb(62, 246, 62);
+  }
+  
+  .path.hidden {
+    display: none; /* Hide the container when there is no error or output */
+  }
+  
+  .path p {
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .path ul {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  
+  .path li:before {
+    content: '→ ';
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+
+  .MazeContainer{
+    background-color:gold;
+    padding:15px;
+    margin:auto;
+    border-radius:15px;
+    width:50%;
+  }
+  

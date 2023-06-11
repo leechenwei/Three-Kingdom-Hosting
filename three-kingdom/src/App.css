@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  margin-top: 0;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 90px;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(251, 0, 0, 0.5), 0px 0px 10px rgba(251, 0, 0, 0.2);
+  background: linear-gradient(to right, #c5e8f3, #f9fbe9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title a {
+  text-decoration: none !important;
+}
+
+.startDescription {
+  margin: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
+  font-family: 'Arial Black', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.startButton {
+  margin-top:10px;
+  padding: 10px 20px;
+  font-size: 32px;
+  background-color: #919191;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.8s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.startButton:hover {
+  background-color: #fff;
+  background-image: linear-gradient(to right, #ffb9bf, #fff0da);
+  background-size: 200% auto;
+  animation: gradient 1s linear infinite;
+  color: #333;
+  transform: scale(1.2);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: -100% center;
+  }
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.background-image.active {
+  opacity: 1;
+}
+
+.background-image:nth-child(1) {
+  background-image: url('/src/components/StartPage/WoodenShip.jpg');
+}
+
+.background-image:nth-child(2) {
+  background-image: url('/src/components/StartPage/WoodenShip1.jpg');
+}
+
+.background-image:nth-child(3) {
+  background-image: url('/src/components/StartPage/WoodenShip2.jpg');
+}
+
+.background-image:nth-child(4) {
+  background-image: url('/src/components/StartPage/WoodenShip3.jpg');
+}
+
+.background-image:nth-child(5) {
+  background-image: url('/src/components/StartPage/WoodenShip4.jpg');
+}
+
+
+

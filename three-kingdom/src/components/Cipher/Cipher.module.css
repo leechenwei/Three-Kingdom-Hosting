@@ -1,0 +1,109 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1bffff, #2e3192);
+  overflow: hidden;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap; /* Allow containers to wrap to the next line */
+  gap: 2rem; /* Add a gap between the containers */
+  margin: 4rem 0; /* Add top and bottom margin to create space */
+}
+
+.contentWrapper{
+  width:100%;
+  margin:30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.content {
+  width: 25%; /* Adjust the width as needed */
+  height: 50vh;
+  max-height: 50vh;
+  background-color: white;
+  padding: 4rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  margin: 10px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  height: 50px;
+}
+
+label {
+  width: 120px;
+}
+
+input[type='text'],
+input[type='number'] {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  overflow: auto;
+  max-height: 100px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  background-color: #2e3192;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.encrypted-text {
+  margin-top: 4rem;
+  word-wrap: break-word;
+  overflow-y: auto;
+}
+
+.encrypted-text label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}

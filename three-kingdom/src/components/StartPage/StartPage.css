@@ -1,0 +1,140 @@
+.App {
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    background-color: #5b9cf8;
+    overflow: hidden;
+    background-image: url('/src/I wish a image that.jpg'); /* Background image */
+    background-size: 100%; /* Adjust the background image size */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center top;
+  }
+  
+  .circle {
+    position: absolute;
+    width: 200px; /* Increase the size of the circle */
+    height: 200px; /* Increase the size of the circle */
+    border-radius: 50%;
+    cursor:pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 1.5); /* Add a box shadow for a 3D effect */
+    background: linear-gradient(to bottom right, #ffffff, #00c9ff);
+    transition: background-color 0.3s, transform 0.3s;
+    border:solid 0.5px rgb(34, 0, 255);
+  }
+  
+  .circle:hover {
+    background-color: #84b1ff;
+    transform: scale(1.2); /* Increase the size of the circle */
+  }
+  
+  .icon {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .icon-box {
+    width: 12%;
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: #d4e4ff;
+    border: 1px solid #4287f5;
+    border-radius: 5px;
+  }
+  
+  .icon-label {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .icon-value {
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .cloud-banner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .cloud {
+    position: absolute;
+    width: 250vh;
+    height: 300px;
+    background-size: cover;
+    z-index:-1;
+    bottom:0;
+    opacity:0.6;
+  }
+  
+  .cloud-1 {
+    background-image: url('/src/cloud2.png');
+    animation: cloudAnimationLeft 10s linear infinite;
+  }
+  
+  .cloud-2 {
+    background-image: url('/src/cloud2 (1).png');
+    animation: cloudAnimationRight 8s linear infinite;
+  }
+  
+  .cloud-3 {
+    background-image: url('/src/cloud3.png');
+    animation: cloudAnimationLeft 12s linear infinite;
+  }
+  
+  .cloud-4 {
+    background-image : url('/src/cloud4.png');
+    animation: cloudAnimationRight 10s linear infinite;
+  }
+  
+  .cloud-5 {
+    background-image: url('/src/cloud5.png');
+    animation: cloudAnimationLeft 8s linear infinite;
+  }
+  
+  /* Define keyframes for clouds moving to the left */
+  @keyframes cloudAnimationLeft {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-50px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Define keyframes for clouds moving to the right */
+  @keyframes cloudAnimationRight {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }

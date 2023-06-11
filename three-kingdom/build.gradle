@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.5.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter'
+}
+
+application {
+    mainClassName = 'com.example.MyApplication'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['C:/Users/Luis Lee/Desktop/UM/Semester 2/WIX1002 DS/Assignment/React/three-kingdom/src/java']
+        }
+    }
+}

@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.boatarrow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./BoatArrow.png');
+    /* Use the relative path to the image file */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.rectangle {
+    position: absolute;
+    width: 95px;
+    height: 50vh;
+    opacity: 0.8;
+    background: linear-gradient(to bottom, #00ff00, #008000);
+    background-image: url('./Strawman.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid yellow;
+}
+
+.rectangle-horizontal {
+    position: absolute;
+    width: 34vh;
+    height: 50px;
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid yellow;
+    border-radius: 25px;
+    background-image: url('./Haystack.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.rectangle-horizontal:hover {
+    cursor:pointer;
+    transform:scale(1.2);
+}
+
+.rectangle:hover {
+    cursor:pointer;
+    transform:scale(1.2);
+}
+
+.cloud-top-left {
+    position: absolute;
+    left: -58%;
+    top: 5%;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/cloud2.png');
+    transform: rotate(120deg);
+    opacity: 0.6;
+    animation-name: cloudAnimationTopLeft;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+
+.cloud-top-right {
+    position: absolute;
+    right: -55%;
+    top: 5%;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/cloud2.png');
+    transform: rotate(245deg);
+    opacity: 0.6;
+    animation-name: cloudAnimationTopRight;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.cloud-bottom-left {
+    position: absolute;
+    left: -60%;
+    top: 5%;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/cloud2.png');
+    transform: rotate(55deg);
+    opacity: 0.6;
+    animation-name: cloudAnimationBtmLeft;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.cloud-bottom-right {
+    position: absolute;
+    right: -55%;
+    top: 5%;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/cloud2.png');
+    transform: rotate(300deg);
+    opacity: 0.6;
+    animation-name: cloudAnimationBtmRight;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cloudAnimationBtmRight {
+    0% {
+      transform: rotate(300deg) translateX(0%);
+    }
+    50% {
+      transform: rotate(300deg) translateX(10%);
+    }
+    100% {
+      transform: rotate(300deg) translateX(0%);
+    }
+  }
+
+  @keyframes cloudAnimationTopLeft {
+    0% {
+      transform: rotate(120deg) translateX(0%);
+    }
+    50% {
+      transform: rotate(120deg) translateX(10%);
+    }
+    100% {
+      transform: rotate(120deg) translateX(0%);
+    }
+  }
+
+  @keyframes cloudAnimationTopRight {
+    0% {
+      transform: rotate(245deg) translateX(0%);
+    }
+    50% {
+      transform: rotate(245deg) translateX(10%);
+    }
+    100% {
+      transform: rotate(245deg) translateX(0%);
+    }
+  }
+
+  @keyframes cloudAnimationBtmLeft {
+    0% {
+      transform: rotate(55deg) translateX(0%);
+    }
+    50% {
+      transform: rotate(55deg) translateX(10%);
+    }
+    100% {
+      transform: rotate(55deg) translateX(0%);
+    }
+  }
+
+/* Additional CSS for the arrow form */
+.arrowForm {
+  position: absolute;
+  z-index: 10000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrowForm input {
+  margin-bottom: 10px;
+}
+
+.arrowForm button {
+  padding: 10px 20px;
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.arrowForm button:hover {
+  background-color: #00ff00;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  width:120%;
+  color:white;
+}
+
+.input-group input {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.top-input {
+  position: absolute;
+  margin-top:-120%;
+  transform: translateX(-50%);
+}
+
+.left-input {
+  position: absolute;
+  top: 50%;
+  right:180%;
+  transform: translateY(-50%);
+}
+
+.btm-input {
+  position: absolute;
+  top: 220%;
+  right:0%;
+  transform: translateY(-50%);
+}
+
+.right-input {
+  position: absolute;
+  top: 50%;
+  left:180%;
+  transform: translateY(-50%);
+}
+
+.response-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width:100%;
+}
+
+.loading-message {
+  position:absolute;
+  z-index:111111;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top:100px;
+  color:white;
+  width:50vh;
+  text-align:center;
+  height:20vh;
+  border-radius:10px;
+
+}
+
+.json-response {
+  z-index:99999;
+  font-family: monospace;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #e4d0d0;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  width:60%;
+  text-align:center;
+  max-width: 800px;
+  height:50vh;
+  border-radius:10px;
+}
+
+.gif-animation {
+  position: fixed;
+  z-index: 111111;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif-animation img {
+  border-radius:30px;
+  width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}

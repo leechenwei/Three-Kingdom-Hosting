@@ -1,0 +1,189 @@
+.body {
+  background-color: #feadf1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  height: 80vh;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-container label {
+  margin-right: 10px;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top:10px;
+  margin-right:10px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  width: 100%;
+  table-layout: fixed;
+}
+
+td {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #ccc;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  font-weight:bold;
+}
+
+td:hover {
+  background-color: #f2ff00;
+}
+
+/* Global CSS or inline styles */
+
+/* Add CSS rules for each cluster */
+td.cluster-1 {
+  background-color: #ff4848;
+  color: white;
+}
+
+td.cluster-2 {
+  background-color: #00ff00;
+  color: white;
+}
+
+td.cluster-3 {
+  background-color: #0000ff;
+  color: white;
+}
+
+td.cluster-4 {
+  background-color: #ff00ff;
+  color: white;
+}
+
+td.cluster-5 {
+  background-color: #ffff00;
+  color: black;
+}
+
+td.cluster-6 {
+  background-color: #00ffff;
+  color: black;
+}
+
+td.cluster-7 {
+  background-color: #ff8000;
+  color: white;
+}
+
+td.cluster-8 {
+  background-color: #0080ff;
+  color: white;
+}
+
+td.cluster-9 {
+  background-color: #8000ff;
+  color: white;
+}
+
+td.cluster-10 {
+  background-color: #00ff80;
+  color: black;
+}
+
+td.cluster-11 {
+  background-color: #ff0080;
+  color: white;
+}
+
+td.cluster-12 {
+  background-color: #80ff00;
+  color: black;
+}
+
+td.cluster-13 {
+  background-color: #0080ff;
+  color: white;
+}
+
+td.cluster-14 {
+  background-color: #8000ff;
+  color: white;
+}
+
+td.cluster-15 {
+  background-color: #ff8000;
+  color: white;
+}
+
+td.cluster-16 {
+  background-color: #00ff80;
+  color: black;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:last-child td {
+  border-bottom: 1px solid #ccc;
+}
+
+
+.cluster-count {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.cluster-info-list {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.cluster-info-list li {
+  margin-bottom: 5px;
+}
+
+/* Add the following CSS rules for cluster colors */
+
+/* Add more CSS rules for each cluster if needed */
