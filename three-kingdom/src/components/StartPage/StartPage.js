@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './StartPage.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faUtensils, faBolt } from '@fortawesome/free-solid-svg-icons';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import strawman from './Strawman.png';
