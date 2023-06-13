@@ -102,7 +102,7 @@ public class HuaRongRoad {
 }
 
 @Configuration
-class CorsConfig3 implements WebMvcConfigurer {
+class CorsConfig7 implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {

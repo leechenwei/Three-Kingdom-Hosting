@@ -70,6 +70,7 @@ const BoatArrow = () => {
         }
       })
       .then((data) => {
+        console.log(data)
         // Hide the loading message and show the JSON response after 3 seconds
         setTimeout(() => {
           setLoadingMessage('');

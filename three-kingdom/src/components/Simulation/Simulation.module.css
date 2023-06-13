@@ -1,6 +1,9 @@
 .simulation-container {
   width: 100%;
-  overflow: auto;
+  height:100vh;
+  overflow-y: auto;
+  margin:0;
+  background-color:#fda8a8;
 }
 
 .graph-container {
@@ -11,10 +14,9 @@
   padding: 20px;
   background-color: #fda8a8;
   min-height: 100vh;
-  width: 100%;
+  overflow:hidden;
   margin-top: -30px;
-  overflow-y: auto;
-  max-height: 400vh;
+  margin:0;
 }
 
 .graph-canvas {
@@ -30,7 +32,7 @@
 }
 
 .graph-map-image {
-  width: 500px;
+  width: 600px;
   height: auto;
   margin-bottom: 20px;
 }
@@ -79,7 +81,7 @@
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  width: 20%;
+  width: 60%;
 }
 
 .best-path-label {
@@ -98,6 +100,13 @@
   background-color:red;
 }
 
-.graph-node-selected {
-  background-color: red;
+.additional-info{
+  text-align:center;
+  font-size:16px;
+  background-color:yellow;
+  width:60%;
+  margin:auto;
+  border-radius:10px;
+  padding:10px;
+  margin-top:20px;
 }

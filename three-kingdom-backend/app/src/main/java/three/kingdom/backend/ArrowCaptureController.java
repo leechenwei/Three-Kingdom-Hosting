@@ -4,9 +4,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -21,10 +18,10 @@ public class ArrowCaptureController {
         int[] arrowNumber = request.getArrowNumber();
 
         BoatSide[] sides = new BoatSide[4];
-        sides[0] = new BoatSide("front", strawMenNumber[0]);
-        sides[1] = new BoatSide("left", strawMenNumber[1]);
-        sides[2] = new BoatSide("right", strawMenNumber[2]);
-        sides[3] = new BoatSide("back", strawMenNumber[3]);
+        sides[0] = new BoatSide("top", strawMenNumber[0]);
+        sides[1] = new BoatSide("right", strawMenNumber[1]);
+        sides[2] = new BoatSide("bottom", strawMenNumber[2]);
+        sides[3] = new BoatSide("left", strawMenNumber[3]);
 
         int index = 0;
         int[][] result = new int[arrowNumber.length][2];
@@ -92,15 +89,13 @@ class BoatSide {
     }
 
     public double getEfficiency() {
-        switch (captureTimes) {
-            case 0:
-                return 1;
-            case 1:
-                return 0.8;
-            case 2:
-                return 0.4;
+        if (captureTimes == 0) {
+            return 1.0;
+        } else if (captureTimes == 1){
+            return 0.8;
+        } else {
+            return 0.0;
         }
-        return 0;
     }
 
     public int getNumberOfArrowsCaptured(int numberOfArrows) {
@@ -171,16 +166,3 @@ class ArrowCaptureResponse {
     }
 }
 
-
-@Configuration
-class CorsConfig3 implements WebMvcConfigurer {
-
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000")
-                .allowedMethods("*")
-                .allowedHeaders("*")
-                .allowCredentials(true);
-    }
-}
