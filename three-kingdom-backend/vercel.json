@@ -1,0 +1,12 @@
+{
+    "builds": [
+      {
+        "src": "build/libs/*.jar",
+        "use": "@vercel/gradle"
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "build/libs/index.html" }
+    ]
+  }
